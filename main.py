@@ -44,7 +44,7 @@ async def sixty_nine(ctx):
     await ctx.send(response)
 
 
-@bot.command(name='who-sucks?', help='Tells you who the biggest sucka in the discord is')
+@bot.command(name='whosucks?', help='Tells you who the biggest sucka in the discord is')
 async def who_sucks(ctx):
     guild = ctx.guild
     member = random.choice(guild.members)
@@ -55,7 +55,7 @@ async def who_sucks(ctx):
     await ctx.send(response)
 
 
-@bot.command(name='roll-dice', help='Simulates rolling dice.')
+@bot.command(name='rolldice', help='Simulates rolling dice.')
 async def roll(
         ctx,
         number_of_dice: int = commands.parameter(description='Number of dice'),
@@ -69,7 +69,7 @@ async def roll(
     await ctx.send(', '.join(dice))
 
 
-@bot.command(name='create-channel')
+@bot.command(name='createchannel')
 @commands.has_role('Admin')
 async def create_channel(ctx, channel_name='normies'):
     guild = ctx.guild
